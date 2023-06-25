@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <style>
+        body {
+            background-color: #808080;
+        }
+        label {
+            color: white;
+        }
+    </style>
+    <div class="form-group">
+        <h2><label for="type">Type:</label></h2>
+        {{ form_widget(form.type,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'type'
+            }
+        }) }}
+    </div>
+    <input type="submit" name="edit_category" value="Edit" class="btn btn-info"/>
+    {{ form_end(form) }}
+
+    <a href="{{ path('category_list') }}" class="btn btn-primary">Back to Category List</a>
+{% endblock %}

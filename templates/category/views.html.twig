@@ -1,0 +1,18 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <hr/>
+       <br/>
+    <style>
+        body {
+            background-image: url("../images/images1.jpg");
+        }
+    </style>
+    <h2 style="background-color:white;";class="page-header">{{ category.type }}</h2>
+    <ul class="list-group">
+       <br/>
+    </ul>
+        <a href="{{ path('category_list') }}" class="btn btn-primary">Back to Category List</a>
+{% endblock %}
+

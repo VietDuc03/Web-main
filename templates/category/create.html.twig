@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ form_start(form) }}
+     </div>
+    <div class="form-group">
+        <h2><label for="type">Create category:</label></h2>
+        {{ form_widget(form.type,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Category need to add:'
+            }
+        }) }}
+    </div>
+    <style>
+    body {
+        background-image: url("../images/images1.jpg");
+    }
+    h2 {
+        color: white;
+    } 
+    </style>
+    <input type="submit" name="create_category" value="Create" class="btn btn-info"/>
+    {{ form_end(form) }}
+{% endblock %}

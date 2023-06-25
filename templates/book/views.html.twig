@@ -1,0 +1,21 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <hr/>
+    <style>
+        body {
+            background-color: #808080;
+        }
+    </style>
+    <br/>
+    <h2 style="background-color:white;";class="page-header">{{ book.name }}</h2>
+    <ul class="list-group">
+        <li class="list-group-item">Price: {{ book.price }}</li>
+        <li class="list-group-item">Quantity: {{ book.quantity }}</li>
+        <li class="list-group-item">Quantity: {{ book.category }}</li>
+    <br/>    
+    </ul>
+        <a href="{{ path('book_list') }}" class="btn btn-primary">Back to Book List</a>
+{% endblock %}
+
